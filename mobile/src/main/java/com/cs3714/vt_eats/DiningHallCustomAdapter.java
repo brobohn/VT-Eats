@@ -5,16 +5,15 @@ import android.widget.ArrayAdapter;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
  * Created by Stev on 4/23/16.
  */
-class CustomAdapter extends ArrayAdapter<String> {
+class DiningHallCustomAdapter extends ArrayAdapter<String> {
 
-    CustomAdapter(Context context, String[] DiningHalls) {
+
+    DiningHallCustomAdapter(Context context, String[] DiningHalls) {
 
         super(context, R.layout.custom_row, DiningHalls);
     }

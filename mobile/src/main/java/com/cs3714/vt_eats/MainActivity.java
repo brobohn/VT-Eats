@@ -1,5 +1,6 @@
 package com.cs3714.vt_eats;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +8,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
                 "DXpress", "Owens Food Market", "Dunkin Donuts", "Hokie Grill"};
 
 
-        ListAdapter DiningHallsAdapter = new CustomAdapter(this, DiningHallList);
+        ListAdapter DiningHallsAdapter = new DiningHallCustomAdapter(this, DiningHallList);
         lv = (ListView) findViewById(R.id.listView);
         lv.setAdapter(DiningHallsAdapter);
 
@@ -31,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-
-
+                        Intent intent = new Intent(MainActivity.this, FoodInfoActivity.class);
+                        startActivity(intent);
                     }
                 }
         );
