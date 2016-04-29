@@ -27,14 +27,16 @@ class CustomAdapter extends ArrayAdapter<DiningHall> {
 
         // Name
         String hallName = getItem(position).getName();
-        TextView DiningHallText = (TextView) customView.findViewById(R.id.tv_name);
-        DiningHallText.setText(hallName);
+        TextView nameTextView = (TextView) customView.findViewById(R.id.tv_name);
+        nameTextView.setText(hallName);
 
         // Open
         boolean isOpen = getItem(position).isOpen();
-
+        TextView openTextView = (TextView) customView.findViewById(R.id.tv_open);
         if (isOpen) {
-            // TODO
+            openTextView.setText("Open Now!");
+        } else {
+            openTextView.setText("Closed");
         }
 
         // Display hours

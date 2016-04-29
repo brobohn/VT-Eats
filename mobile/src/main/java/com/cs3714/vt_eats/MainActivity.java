@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        String[] DiningHallList = {"Au Bon Pain - Graduate Life Center", "Au Bon Pain - Squires Cafe",
+        /*String[] DiningHallList = {"Au Bon Pain - Graduate Life Center", "Au Bon Pain - Squires Cafe",
                 "Au Bon Pain - Squires Kiosk", "Au Bon Pain - Goodwin", "Burger '37", "D2", "Deet's Place", "West End Market", "Turner Place at Lavery",
-                "DXpress", "Owens Food Market", "Dunkin Donuts", "Hokie Grill"};
+                "DXpress", "Owens Food Market", "Dunkin Donuts", "Hokie Grill"};*/
 
 
         ListAdapter DiningHallsAdapter = new CustomAdapter(this, diningHallManager.getDiningHalls());

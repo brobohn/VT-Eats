@@ -15,14 +15,15 @@ public class DiningHall {
     Location location;
     HashMap<String, FoodItem> menu;
     ArrayList<BusinessHour> businessHours;
+    final int secondsPerHour = 60*60;
 
     public DiningHall(String n) {
         this.name = n;
         this.businessHours = new ArrayList<BusinessHour>();
     }
 
-    public void addHours(int day, int open, int close) {
-        businessHours.add(new BusinessHour(day, open, close));
+    public void addHours(int day, double open, double close) {
+        businessHours.add(new BusinessHour(day, (int)open*secondsPerHour, (int)close*secondsPerHour));
     }
 
     public boolean isOpen() {
