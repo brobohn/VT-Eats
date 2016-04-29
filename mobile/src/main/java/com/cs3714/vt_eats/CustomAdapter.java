@@ -12,11 +12,11 @@ import android.widget.TextView;
 /**
  * Created by Stev on 4/23/16.
  */
-class CustomAdapter extends ArrayAdapter<String> {
+class CustomAdapter extends ArrayAdapter<DiningHall> {
 
-    CustomAdapter(Context context, String[] DiningHalls) {
+    CustomAdapter(Context context, DiningHall[] diningHalls) {
 
-        super(context, R.layout.custom_row, DiningHalls);
+        super(context, R.layout.custom_row, diningHalls);
     }
 
     @Override
@@ -25,10 +25,19 @@ class CustomAdapter extends ArrayAdapter<String> {
         LayoutInflater inflater = LayoutInflater.from(getContext());
         View customView = inflater.inflate(R.layout.custom_row, parent, false);
 
-        String singleDiningHall = getItem(position);
-        TextView DiningHallText = (TextView) customView.findViewById(R.id.textView);
+        // Name
+        String hallName = getItem(position).getName();
+        TextView DiningHallText = (TextView) customView.findViewById(R.id.tv_name);
+        DiningHallText.setText(hallName);
 
-        DiningHallText.setText(singleDiningHall);
+        // Open
+        boolean isOpen = getItem(position).isOpen();
+
+        if (isOpen) {
+            // TODO
+        }
+
+        // Display hours
 
         return customView;
 

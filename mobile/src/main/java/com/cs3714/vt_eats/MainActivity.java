@@ -10,12 +10,15 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
+    DiningHallManager diningHallManager;
     ListView lv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        diningHallManager = new DiningHallManager();
 
 
 
@@ -24,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 "DXpress", "Owens Food Market", "Dunkin Donuts", "Hokie Grill"};
 
 
-        ListAdapter DiningHallsAdapter = new CustomAdapter(this, DiningHallList);
+        ListAdapter DiningHallsAdapter = new CustomAdapter(this, diningHallManager.getDiningHalls());
         lv = (ListView) findViewById(R.id.listView);
         lv.setAdapter(DiningHallsAdapter);
 
