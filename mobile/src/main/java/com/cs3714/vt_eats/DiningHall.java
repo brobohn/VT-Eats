@@ -26,9 +26,8 @@ public class DiningHall {
         businessHours.add(new BusinessHour(day, (int)open*secondsPerHour, (int)close*secondsPerHour));
     }
 
-    public boolean isOpen() {
+    public boolean isOpenNow() {
         Calendar c = Calendar.getInstance();
-
         int thisDay = c.get(Calendar.DAY_OF_WEEK);
         int hours = c.get(Calendar.HOUR);
         int minutes = c.get(Calendar.MINUTE);
@@ -52,8 +51,36 @@ public class DiningHall {
         return false;
     }
 
+    public boolean isOpenToday() {
+        Calendar c = Calendar.getInstance();
+        int thisDay = c.get(Calendar.DAY_OF_WEEK);
+
+        for (BusinessHour bh : businessHours) {
+            if (bh.day == thisDay) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public String getTodaysHoursString() {
+        Calendar c = Calendar.getInstance();
+        int thisDay = c.get(Calendar.DAY_OF_WEEK);
+
+        StringBuilder str = new StringBuilder();
+
+        for (BusinessHour bh : businessHours) {
+            if (bh.day == thisDay) {
+                str.append(bh.toString() + " ");
+            }
+        }
+
+        return str.toString();
     }
 
 

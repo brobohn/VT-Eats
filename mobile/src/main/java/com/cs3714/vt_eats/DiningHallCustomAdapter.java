@@ -5,8 +5,6 @@ import android.widget.ArrayAdapter;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -31,15 +29,23 @@ class DiningHallCustomAdapter extends ArrayAdapter<DiningHall> {
         nameTextView.setText(hallName);
 
         // Open
-        boolean isOpen = getItem(position).isOpen();
+        boolean isOpenNow = getItem(position).isOpenNow();
         TextView openTextView = (TextView) customView.findViewById(R.id.tv_open);
-        if (isOpen) {
-            openTextView.setText("Open Now!");
+        if (isOpenNow) {
+            openTextView.setText("Open now!");
         } else {
-            openTextView.setText("Closed");
+            openTextView.setText("Closed now.");
         }
 
         // Display hours
+        boolean isOpenToday = getItem(position).isOpenToday();
+        TextView hoursTextView = (TextView) customView.findViewById(R.id.tv_hours);
+
+        if (isOpenToday) {
+            hoursTextView.setText(getItem(position).getTodaysHoursString());
+        } else {
+            hoursTextView.setText("Closed all day.");
+        }
 
         return customView;
 
