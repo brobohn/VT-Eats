@@ -23,14 +23,14 @@ public class FoodInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_foodinfo);
 
         // Toolbar is defined in the layout file
-        Toolbar myToolBar = (Toolbar) findViewById(R.id.my_toolbar);
+    /*    Toolbar myToolBar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolBar);
 
         // Get a support ActionBar corresponding to this toolbar
         ActionBar ab = getSupportActionBar();
 
         // Enable the Up button
-        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setDisplayHomeAsUpEnabled(true); */
 
         Intent intent = getIntent();
         int defaultValue = 0;

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">VT-Eats</string>
+    <string name="action_search">Search</string>
 </resources>
