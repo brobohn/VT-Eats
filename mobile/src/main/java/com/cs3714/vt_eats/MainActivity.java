@@ -4,7 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
@@ -27,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 "DXpress", "Owens Food Market", "Dunkin Donuts", "Hokie Grill"};*/
 
 
-        ListAdapter DiningHallsAdapter = new CustomAdapter(this, diningHallManager.getDiningHalls());
+        ListAdapter DiningHallsAdapter = new DiningHallCustomAdapter(this, diningHallManager.getDiningHalls());
         lv = (ListView) findViewById(R.id.listView);
         lv.setAdapter(DiningHallsAdapter);
 

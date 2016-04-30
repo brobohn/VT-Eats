@@ -12,9 +12,9 @@ import android.widget.TextView;
 /**
  * Created by Stev on 4/23/16.
  */
-class CustomAdapter extends ArrayAdapter<DiningHall> {
+class DiningHallCustomAdapter extends ArrayAdapter<DiningHall> {
 
-    CustomAdapter(Context context, DiningHall[] diningHalls) {
+    DiningHallCustomAdapter(Context context, DiningHall[] diningHalls) {
 
         super(context, R.layout.custom_row, diningHalls);
     }

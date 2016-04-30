@@ -105,25 +105,58 @@ public class DiningHallManager {
         dd.addHours(Calendar.FRIDAY, 7.5, 21);
         diningHalls[7] = dd;
 
-        // TODO pick up here
         DiningHall dx = new DiningHall("DXpress");
-        dx.addHours(Calendar.FRIDAY, 0, 18);
+        dx.addHours(Calendar.SUNDAY, 0, 2);
+        dx.addHours(Calendar.SUNDAY, 9, 24);
+        dx.addHours(Calendar.MONDAY, 0, 2);
+        dx.addHours(Calendar.MONDAY, 7, 24);
+        dx.addHours(Calendar.TUESDAY, 0, 2);
+        dx.addHours(Calendar.TUESDAY, 7, 24);
+        dx.addHours(Calendar.WEDNESDAY, 0, 2);
+        dx.addHours(Calendar.WEDNESDAY, 7, 24);
+        dx.addHours(Calendar.THURSDAY, 0, 2);
+        dx.addHours(Calendar.THURSDAY, 7, 24);
+        dx.addHours(Calendar.FRIDAY, 0, 2);
+        dx.addHours(Calendar.FRIDAY, 7, 24);
+        dx.addHours(Calendar.SATURDAY, 0, 2);
+        dx.addHours(Calendar.SATURDAY, 7, 24);
         diningHalls[8] = dx;
 
         DiningHall hg = new DiningHall("Hokie Grill");
-        hg.addHours(Calendar.FRIDAY, 0, 18);
+        hg.addHours(Calendar.MONDAY, 10.5, 21);
+        hg.addHours(Calendar.TUESDAY, 10.5, 21);
+        hg.addHours(Calendar.WEDNESDAY, 10.5, 21);
+        hg.addHours(Calendar.THURSDAY, 10.5, 21);
+        hg.addHours(Calendar.FRIDAY, 10.5, 21);
+        hg.addHours(Calendar.SATURDAY, 12, 20);
         diningHalls[9] = hg;
 
         DiningHall owens = new DiningHall("Owens Food Court");
-        owens.addHours(Calendar.FRIDAY, 0, 18);
+        owens.addHours(Calendar.SUNDAY, 10.5, 21);
+        owens.addHours(Calendar.MONDAY, 10.5, 21);
+        owens.addHours(Calendar.TUESDAY, 10.5, 21);
+        owens.addHours(Calendar.WEDNESDAY, 10.5, 21);
+        owens.addHours(Calendar.THURSDAY, 10.5, 21);
+        owens.addHours(Calendar.FRIDAY, 10.5, 20);
+        owens.addHours(Calendar.SATURDAY, 10.5, 20);
         diningHalls[10] = owens;
 
         DiningHall turner = new DiningHall("Turner Place");
-        turner.addHours(Calendar.FRIDAY, 0, 18);
+        turner.addHours(Calendar.MONDAY, 7, 22);
+        turner.addHours(Calendar.TUESDAY, 7, 22);
+        turner.addHours(Calendar.WEDNESDAY, 7, 22);
+        turner.addHours(Calendar.THURSDAY, 7, 22);
+        turner.addHours(Calendar.FRIDAY, 7, 22);
         diningHalls[11] = turner;
 
         DiningHall we = new DiningHall("West End Market");
-        we.addHours(Calendar.FRIDAY, 0, 18);
+        we.addHours(Calendar.SUNDAY, 11, 20);
+        we.addHours(Calendar.MONDAY, 10.5, 20);
+        we.addHours(Calendar.TUESDAY, 10.5, 20);
+        we.addHours(Calendar.WEDNESDAY, 10.5, 20);
+        we.addHours(Calendar.THURSDAY, 10.5, 20);
+        we.addHours(Calendar.FRIDAY, 10.5, 20);
+        we.addHours(Calendar.SATURDAY, 11, 20);
         diningHalls[12] = we;
 
 
