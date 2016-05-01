@@ -9,13 +9,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.cs3714.vt_eats.MainActivity">
 
-<<<<<<< HEAD
-=======
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/listView"
         android:choiceMode="singleChoice" />
-
->>>>>>> 82e9c21f5751e4ba2b8c24b41679f80928d9082d
 </RelativeLayout>

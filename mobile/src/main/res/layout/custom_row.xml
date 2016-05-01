@@ -8,20 +8,27 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Text 1"
-        android:id="@+id/textView" />
+        android:id="@+id/tv_name" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Daily Hours: "
-        android:id="@+id/textView2" />
+        android:text=""
+        android:id="@+id/tv_open" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Today's Hours: "
+        android:id="@+id/tv_hours" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Distance: "
-        android:id="@+id/textView3" />
+        android:id="@+id/tv_distance" />
 
 </LinearLayout>

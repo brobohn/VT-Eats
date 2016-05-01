@@ -10,6 +10,7 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
+    DiningHallManager diningHallManager;
     ListView lv;
 
     @Override
@@ -17,14 +18,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        diningHallManager = new DiningHallManager();
 
 
-        String[] DiningHallList = {"Au Bon Pain - Graduate Life Center", "Au Bon Pain - Squires Cafe",
+
+        /*String[] DiningHallList = {"Au Bon Pain - Graduate Life Center", "Au Bon Pain - Squires Cafe",
                 "Au Bon Pain - Squires Kiosk", "Au Bon Pain - Goodwin", "Burger '37", "D2", "Deet's Place", "West End Market", "Turner Place at Lavery",
-                "DXpress", "Owens Food Market", "Dunkin Donuts", "Hokie Grill"};
+                "DXpress", "Owens Food Market", "Dunkin Donuts", "Hokie Grill"};*/
 
 
-        ListAdapter DiningHallsAdapter = new CustomAdapter(this, DiningHallList);
+        ListAdapter DiningHallsAdapter = new CustomAdapter(this, diningHallManager.getDiningHalls());
         lv = (ListView) findViewById(R.id.listView);
         lv.setAdapter(DiningHallsAdapter);
 
