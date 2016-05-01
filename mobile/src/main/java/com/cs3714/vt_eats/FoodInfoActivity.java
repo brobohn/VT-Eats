@@ -10,12 +10,15 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 
 public class FoodInfoActivity extends AppCompatActivity {
 
     ListView foodlist;
     ImageView iv;
+    DiningHall diningHall;
+    TextView tv_title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,11 @@ public class FoodInfoActivity extends AppCompatActivity {
         Intent intent = getIntent();
         int defaultValue = 0;
         int DiningHallSelected = intent.getIntExtra("DINING_HALL_SELECTION", defaultValue);
+        diningHall = (DiningHall) intent.getParcelableExtra("DINING_HALL_OBJECT");
+
+        tv_title = (TextView) findViewById(R.id.dininghalltitle);
+        tv_title.setText(diningHall.getName());
+
 
         String[] ABPFoodList = {"Black Angus Steak", "Classic Grilled Cheese", "Country Grilled Cheese",
                 "Ham & Two Cheese", "Mayan Chicken Harvest Hot Wrap", "Newport Turkey", "Oven Hot Margherita",
