@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
                         Intent intent = new Intent(MainActivity.this, FoodInfoActivity.class);
                         intent.putExtra("DINING_HALL_SELECTION", DiningHallSelection);
+                        intent.putExtra("DINING_HALL_OBJECT", diningHallManager.getDiningHalls()[position]);
                         startActivity(intent);
                     }
                 }

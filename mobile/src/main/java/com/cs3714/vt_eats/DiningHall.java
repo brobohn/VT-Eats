@@ -1,26 +1,49 @@
 package com.cs3714.vt_eats;
 
 import android.location.Location;
+import android.os.Parcel;
+import android.os.Parcelable;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by Ben on 4/29/2016.
  */
-public class DiningHall {
+public class DiningHall implements Parcelable {
 
     private String name;
     Location location;
     HashMap<String, FoodItem> menu;
     ArrayList<BusinessHour> businessHours;
-    final int secondsPerHour = 60*60;
+    int secondsPerHour = 60*60;
 
     public DiningHall(String n) {
         this.name = n;
         this.businessHours = new ArrayList<BusinessHour>();
     }
+
+    protected DiningHall(Parcel in) {
+        name = in.readString();
+        location = in.readParcelable(Location.class.getClassLoader());
+        secondsPerHour = in.readInt();
+        businessHours = in.readArrayList(null);
+    }
+
+    public static final Creator<DiningHall> CREATOR = new Creator<DiningHall>() {
+        @Override
+        public DiningHall createFromParcel(Parcel in) {
+            return new DiningHall(in);
+        }
+
+        @Override
+        public DiningHall[] newArray(int size) {
+            return new DiningHall[size];
+        }
+    };
 
     public void addHours(int day, double open, double close) {
         businessHours.add(new BusinessHour(day, (int)open*secondsPerHour, (int)close*secondsPerHour));
@@ -72,12 +95,20 @@ public class DiningHall {
         Calendar c = Calendar.getInstance();
         int thisDay = c.get(Calendar.DAY_OF_WEEK);
 
+        return getHoursByDay(thisDay);
+    }
+
+    public String getHoursByDay(int day) {
         StringBuilder str = new StringBuilder();
 
         for (BusinessHour bh : businessHours) {
-            if (bh.day == thisDay) {
+            if (bh.day == day) {
                 str.append(bh.toString() + " ");
             }
+        }
+
+        if (str.toString().isEmpty()) {
+            return "Closed";
         }
 
         return str.toString();
@@ -94,8 +125,21 @@ public class DiningHall {
         return location;
     }
 
+
     public void addFoodItem(String name, FoodItem foodItem){
         menu.put(name, foodItem);
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeParcelable(location, flags);
+        dest.writeInt(secondsPerHour);
+        dest.writeList(businessHours);
+    }
 }

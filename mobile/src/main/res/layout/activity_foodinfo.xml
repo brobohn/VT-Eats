@@ -80,7 +80,7 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="30dp">
+                android:layout_marginLeft="100dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -96,25 +96,12 @@
                     android:text="SundayOpening"
                     android:id="@+id/sundayopeningtext" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="-"
-                    android:id="@+id/dashtext0" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="SundayClosing"
-                    android:id="@+id/sundayclosingtext" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="30dp">
+                android:layout_marginLeft="100dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -130,25 +117,12 @@
                     android:text="MondayOpening"
                     android:id="@+id/mondayopeningtext" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="-"
-                    android:id="@+id/dashtext1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="MondayClosing"
-                    android:id="@+id/mondayclosingtext" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="30dp">
+                android:layout_marginLeft="100dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -164,25 +138,12 @@
                     android:text="TuesdayOpening"
                     android:id="@+id/tuesdayopeningtext" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="-"
-                    android:id="@+id/dashtext2" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="TuesdayClosing"
-                    android:id="@+id/tuesdayclosingtext" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="30dp">
+                android:layout_marginLeft="100dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -198,25 +159,12 @@
                     android:text="WednesdayOpening"
                     android:id="@+id/wedopeningtext" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="-"
-                    android:id="@+id/dashtext3" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="WednesdayClosing"
-                    android:id="@+id/wedclosingtext" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="30dp">
+                android:layout_marginLeft="100dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -232,25 +180,12 @@
                     android:text="ThursdayOpening"
                     android:id="@+id/thursopeningtext" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="-"
-                    android:id="@+id/dashtext4" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="ThursdayClosing"
-                    android:id="@+id/thursclosingtext" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="30dp">
+                android:layout_marginLeft="100dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -266,25 +201,12 @@
                     android:text="FridayOpening"
                     android:id="@+id/fridayopeningtext" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="-"
-                    android:id="@+id/dashtext" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="FridayClosing"
-                    android:id="@+id/fridayclosingtext" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="30dp">
+                android:layout_marginLeft="100dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -300,22 +222,18 @@
                     android:text="SaturdayOpening"
                     android:id="@+id/satopeningtext" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="-"
-                    android:id="@+id/dashtext6" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="SaturdayClosing"
-                    android:id="@+id/satclosingtext" />
             </TableRow>
 
         </TableLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Food Menu"
+            android:id="@+id/Menulabeltext"
+            android:textStyle="bold|italic"
+            android:layout_marginLeft="10dp"/>
 
         <ListView
             android:layout_width="wrap_content"

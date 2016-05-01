@@ -1,9 +1,11 @@
 package com.cs3714.vt_eats;
 
+import java.io.Serializable;
+
 /**
  * Created by Ben on 4/29/2016.
  */
-public class BusinessHour {
+public class BusinessHour implements Serializable {
 
     public int day;
     public int open; // seconds since midnight
