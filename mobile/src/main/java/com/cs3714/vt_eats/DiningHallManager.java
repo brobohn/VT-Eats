@@ -1,5 +1,7 @@
 package com.cs3714.vt_eats;
 
+import android.location.Location;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -24,12 +26,14 @@ public class DiningHallManager {
     }
 
     private void buildDiningHalls() {
+
         DiningHall abpglc = new DiningHall("Au Bon Pain - Graduate Life Center");
         abpglc.addHours(Calendar.MONDAY, 7.5, 20);
         abpglc.addHours(Calendar.TUESDAY, 7.5, 20);
         abpglc.addHours(Calendar.WEDNESDAY, 7.5, 20);
         abpglc.addHours(Calendar.THURSDAY, 7.5, 20);
         abpglc.addHours(Calendar.FRIDAY, 7.5, 15);
+        abpglc.setLocation(37.228237, -80.417594);
         diningHalls[0] = abpglc;
 
         DiningHall abpsc = new DiningHall("Au Bon Pain - Squires Cafe");
@@ -40,6 +44,7 @@ public class DiningHallManager {
         abpsc.addHours(Calendar.THURSDAY, 8, 19);
         abpsc.addHours(Calendar.FRIDAY, 8, 15);
         abpsc.addHours(Calendar.SATURDAY, 10, 19);
+        abpsc.setLocation(37.229446, -80.418240);
         diningHalls[1] = abpsc;
 
         DiningHall abpsk = new DiningHall("Au Bon Pain - Squires Kiosk");
@@ -48,6 +53,7 @@ public class DiningHallManager {
         abpsk.addHours(Calendar.WEDNESDAY, 7, 19);
         abpsk.addHours(Calendar.THURSDAY, 7, 19);
         abpsk.addHours(Calendar.FRIDAY, 7, 19);
+        abpsk.setLocation(37.229491, -80.418077);
         diningHalls[2] = abpsk;
 
         DiningHall abpg = new DiningHall("Au Bon Pain - Goodwin");
@@ -56,6 +62,7 @@ public class DiningHallManager {
         abpg.addHours(Calendar.WEDNESDAY, 7.5, 14);
         abpg.addHours(Calendar.THURSDAY, 7.5, 14);
         abpg.addHours(Calendar.FRIDAY, 7.5, 15.5);
+        abpg.setLocation(37.232431, -80.425817);
         diningHalls[3] = abpg;
 
         DiningHall b37 = new DiningHall("Burger '37");
@@ -66,6 +73,7 @@ public class DiningHallManager {
         b37.addHours(Calendar.THURSDAY, 10.5, 21);
         b37.addHours(Calendar.FRIDAY, 10.5, 19);
         b37.addHours(Calendar.SATURDAY, 11, 19);
+        b37.setLocation(37.229209, -80.418380);
         diningHalls[4] = b37;
 
         DiningHall d2 = new DiningHall("D2");
@@ -85,6 +93,7 @@ public class DiningHallManager {
         d2.addHours(Calendar.FRIDAY, 7, 9.5);
         d2.addHours(Calendar.FRIDAY, 11, 14);
         d2.addHours(Calendar.FRIDAY, 17, 19);
+        d2.setLocation(37.224483, -80.421081);
         diningHalls[5] = d2;
 
         DiningHall deets = new DiningHall("Deet's Place");
@@ -95,6 +104,7 @@ public class DiningHallManager {
         deets.addHours(Calendar.THURSDAY, 7.5, 24);
         deets.addHours(Calendar.FRIDAY, 7.5, 24);
         deets.addHours(Calendar.SATURDAY, 10, 24);
+        deets.setLocation();
         diningHalls[6] = deets;
 
         DiningHall dd = new DiningHall("Dunkin Donuts");

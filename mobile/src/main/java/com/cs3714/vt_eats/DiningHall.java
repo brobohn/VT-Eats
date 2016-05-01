@@ -83,6 +83,15 @@ public class DiningHall {
         return str.toString();
     }
 
+    public void setLocation(double lat, double lon){
+        Location loc = new Location("");
+        loc.setLatitude(lat);
+        loc.setLongitude(lon);
+        location = loc;
+    }
 
+    public Location getLocation(){
+        return location;
+    }
 
 }
