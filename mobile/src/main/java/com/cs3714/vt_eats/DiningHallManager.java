@@ -104,7 +104,7 @@ public class DiningHallManager {
         deets.addHours(Calendar.THURSDAY, 7.5, 24);
         deets.addHours(Calendar.FRIDAY, 7.5, 24);
         deets.addHours(Calendar.SATURDAY, 10, 24);
-        deets.setLocation();
+        deets.setLocation(37.224203, -80.421242);
         diningHalls[6] = deets;
 
         DiningHall dd = new DiningHall("Dunkin Donuts");
@@ -113,6 +113,7 @@ public class DiningHallManager {
         dd.addHours(Calendar.WEDNESDAY, 7.5, 21);
         dd.addHours(Calendar.THURSDAY, 7.5, 21);
         dd.addHours(Calendar.FRIDAY, 7.5, 21);
+        dd.setLocation(37.226881, -80.418482);
         diningHalls[7] = dd;
 
         DiningHall dx = new DiningHall("DXpress");
@@ -130,6 +131,7 @@ public class DiningHallManager {
         dx.addHours(Calendar.FRIDAY, 7, 24);
         dx.addHours(Calendar.SATURDAY, 0, 2);
         dx.addHours(Calendar.SATURDAY, 7, 24);
+        dx.setLocation(37.224525, -80.420769);
         diningHalls[8] = dx;
 
         DiningHall hg = new DiningHall("Hokie Grill");
@@ -139,6 +141,7 @@ public class DiningHallManager {
         hg.addHours(Calendar.THURSDAY, 10.5, 21);
         hg.addHours(Calendar.FRIDAY, 10.5, 21);
         hg.addHours(Calendar.SATURDAY, 12, 20);
+        hg.setLocation(37.226793, -80.418691);
         diningHalls[9] = hg;
 
         DiningHall owens = new DiningHall("Owens Food Court");
@@ -149,6 +152,7 @@ public class DiningHallManager {
         owens.addHours(Calendar.THURSDAY, 10.5, 21);
         owens.addHours(Calendar.FRIDAY, 10.5, 20);
         owens.addHours(Calendar.SATURDAY, 10.5, 20);
+        owens.setLocation(37.226603, -80.418956);
         diningHalls[10] = owens;
 
         DiningHall turner = new DiningHall("Turner Place");
@@ -157,6 +161,7 @@ public class DiningHallManager {
         turner.addHours(Calendar.WEDNESDAY, 7, 22);
         turner.addHours(Calendar.THURSDAY, 7, 22);
         turner.addHours(Calendar.FRIDAY, 7, 22);
+        turner.setLocation(37.230973, -80.422623);
         diningHalls[11] = turner;
 
         DiningHall we = new DiningHall("West End Market");
@@ -167,6 +172,7 @@ public class DiningHallManager {
         we.addHours(Calendar.THURSDAY, 10.5, 20);
         we.addHours(Calendar.FRIDAY, 10.5, 20);
         we.addHours(Calendar.SATURDAY, 11, 20);
+        we.setLocation(37.223395, -80.421993);
         diningHalls[12] = we;
 
 

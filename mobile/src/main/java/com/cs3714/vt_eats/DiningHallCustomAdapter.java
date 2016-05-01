@@ -47,6 +47,8 @@ class DiningHallCustomAdapter extends ArrayAdapter<DiningHall> {
             hoursTextView.setText("Closed all day.");
         }
 
+        // Set Distance
+
         return customView;
 
     }
