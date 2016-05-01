@@ -107,6 +107,10 @@ public class DiningHall implements Parcelable {
             }
         }
 
+        if (str.toString().isEmpty()) {
+            return "Closed";
+        }
+
         return str.toString();
     }
 

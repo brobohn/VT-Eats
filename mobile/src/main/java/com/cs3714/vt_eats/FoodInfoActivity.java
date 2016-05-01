@@ -48,6 +48,24 @@ public class FoodInfoActivity extends AppCompatActivity {
         TextView tv_sunday_open = (TextView) findViewById(R.id.sundayopeningtext);
         tv_sunday_open.setText(diningHall.getHoursByDay(Calendar.SUNDAY));
 
+        TextView tv_monday_open = (TextView) findViewById(R.id.mondayopeningtext);
+        tv_monday_open.setText(diningHall.getHoursByDay(Calendar.MONDAY));
+
+        TextView tv_tuesday_open = (TextView) findViewById(R.id.tuesdayopeningtext);
+        tv_tuesday_open.setText(diningHall.getHoursByDay(Calendar.TUESDAY));
+
+        TextView tv_wednesday_open = (TextView) findViewById(R.id.wedopeningtext);
+        tv_wednesday_open.setText(diningHall.getHoursByDay(Calendar.WEDNESDAY));
+
+        TextView tv_thursday_open = (TextView) findViewById(R.id.thursopeningtext);
+        tv_thursday_open.setText(diningHall.getHoursByDay(Calendar.THURSDAY));
+
+        TextView tv_friday_open = (TextView) findViewById(R.id.fridayopeningtext);
+        tv_friday_open.setText(diningHall.getHoursByDay(Calendar.FRIDAY));
+
+        TextView tv_saturday_open = (TextView) findViewById(R.id.satopeningtext);
+        tv_saturday_open.setText(diningHall.getHoursByDay(Calendar.SATURDAY));
+
 
 
 
