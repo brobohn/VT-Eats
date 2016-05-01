@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     GPSManager gpsManager;
     Compass compass;
 
+    DiningHallCustomAdapter DiningHallsAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,18 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         diningHallManager = new DiningHallManager();
 
-        Location loc = new Location("");
-        loc.setLatitude(37.236970);
-        loc.setLongitude(-80.434684);
-        double distance = compass.getDistanceTo(loc);
-
-
-        /*String[] DiningHallList = {"Au Bon Pain - Graduate Life Center", "Au Bon Pain - Squires Cafe",
-                "Au Bon Pain - Squires Kiosk", "Au Bon Pain - Goodwin", "Burger '37", "D2", "Deet's Place", "West End Market", "Turner Place at Lavery",
-                "DXpress", "Owens Food Market", "Dunkin Donuts", "Hokie Grill"};*/
-
-
-        ListAdapter DiningHallsAdapter = new DiningHallCustomAdapter(this, diningHallManager.getDiningHalls());
+        DiningHallsAdapter = new DiningHallCustomAdapter(this, diningHallManager.getDiningHalls(), compass.currentLocation);
         lv = (ListView) findViewById(R.id.listView);
         lv.setAdapter(DiningHallsAdapter);
 
@@ -45,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
 
 
                     }
@@ -57,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
     public void updateGPSLocation(Location location) {
         if(location != null){
             compass.setCurrentLocation(location);
+
+            DiningHallsAdapter.notifyDataSetChanged();
         }
     }
 }

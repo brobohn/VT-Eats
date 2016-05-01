@@ -1,5 +1,6 @@
 package com.cs3714.vt_eats;
 
+import android.location.Location;
 import android.view.LayoutInflater;
 import android.widget.ArrayAdapter;
 import android.content.Context;
@@ -12,9 +13,16 @@ import android.widget.TextView;
  */
 class DiningHallCustomAdapter extends ArrayAdapter<DiningHall> {
 
-    DiningHallCustomAdapter(Context context, DiningHall[] diningHalls) {
+    Location currentLocation;
 
+    DiningHallCustomAdapter(Context context, DiningHall[] diningHalls, Location currentLocation) {
         super(context, R.layout.custom_row, diningHalls);
+
+        this.currentLocation = currentLocation;
+    }
+
+    public void updateDistance(Location currentLocation) {
+
     }
 
     @Override
@@ -47,7 +55,13 @@ class DiningHallCustomAdapter extends ArrayAdapter<DiningHall> {
             hoursTextView.setText("Closed all day.");
         }
 
-        // Set Distance
+        // Display location
+        Location otherLocation = getItem(position).getLocation();
+        double distance = currentLocation.distanceTo(otherLocation);
+
+        TextView distanceTextView = (TextView) customView.findViewById(R.id.tv_distance);
+
+        distanceTextView.setText(String.format("%.0f meters", distance));
 
         return customView;
 
