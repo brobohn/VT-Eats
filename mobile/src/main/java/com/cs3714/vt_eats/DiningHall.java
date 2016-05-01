@@ -8,6 +8,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by Ben on 4/29/2016.
@@ -29,6 +30,7 @@ public class DiningHall implements Parcelable {
         name = in.readString();
         location = in.readParcelable(Location.class.getClassLoader());
         secondsPerHour = in.readInt();
+        businessHours = in.readArrayList(null);
     }
 
     public static final Creator<DiningHall> CREATOR = new Creator<DiningHall>() {
@@ -93,10 +95,14 @@ public class DiningHall implements Parcelable {
         Calendar c = Calendar.getInstance();
         int thisDay = c.get(Calendar.DAY_OF_WEEK);
 
+        return getHoursByDay(thisDay);
+    }
+
+    public String getHoursByDay(int day) {
         StringBuilder str = new StringBuilder();
 
         for (BusinessHour bh : businessHours) {
-            if (bh.day == thisDay) {
+            if (bh.day == day) {
                 str.append(bh.toString() + " ");
             }
         }
@@ -125,5 +131,6 @@ public class DiningHall implements Parcelable {
         dest.writeString(name);
         dest.writeParcelable(location, flags);
         dest.writeInt(secondsPerHour);
+        dest.writeList(businessHours);
     }
 }

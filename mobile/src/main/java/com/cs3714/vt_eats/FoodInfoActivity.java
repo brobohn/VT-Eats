@@ -12,13 +12,14 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.Calendar;
+
 
 public class FoodInfoActivity extends AppCompatActivity {
 
     ListView foodlist;
     ImageView iv;
     DiningHall diningHall;
-    TextView tv_title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,18 +41,27 @@ public class FoodInfoActivity extends AppCompatActivity {
         int DiningHallSelected = intent.getIntExtra("DINING_HALL_SELECTION", defaultValue);
         diningHall = (DiningHall) intent.getParcelableExtra("DINING_HALL_OBJECT");
 
-        tv_title = (TextView) findViewById(R.id.dininghalltitle);
+        // Display Hall info
+        TextView tv_title = (TextView) findViewById(R.id.dininghalltitle);
         tv_title.setText(diningHall.getName());
+
+        TextView tv_sunday_open = (TextView) findViewById(R.id.sundayopeningtext);
+        tv_sunday_open.setText(diningHall.getHoursByDay(Calendar.SUNDAY));
+
+
+
+
+
 
 
         String[] ABPFoodList = {"Black Angus Steak", "Classic Grilled Cheese", "Country Grilled Cheese",
                 "Ham & Two Cheese", "Mayan Chicken Harvest Hot Wrap", "Newport Turkey", "Oven Hot Margherita",
                 "Roasted Vegetarian Harvest Hot Wrap", "Teriyaki Steak Harvest Hot Wrap"};
 
+
+        // Picture
         iv = (ImageView) findViewById(R.id.imageView);
-
         switch (DiningHallSelected) {
-
             case 0:  iv.setImageResource(R.drawable.abp);
                 break;
             case 1:  iv.setImageResource(R.drawable.abp);
@@ -79,9 +89,10 @@ public class FoodInfoActivity extends AppCompatActivity {
             case 12: iv.setImageResource(R.drawable.westend);
                 break;
             default: break;
-
         }
 
+
+        // Menu
         ListAdapter FoodNamesAdapter = new FoodListCustomAdapter(this, ABPFoodList);
         foodlist = (ListView) findViewById(R.id.menulistview);
         foodlist.setAdapter(FoodNamesAdapter);
