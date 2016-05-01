@@ -1,5 +1,6 @@
 package com.cs3714.vt_eats;
 
+import android.location.Location;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,12 +13,16 @@ public class MainActivity extends AppCompatActivity {
 
     ListView lv;
 
+    GPSManager gpsManager;
+    Compass compass;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        gpsManager = new GPSManager(this);
+        compass = new Compass();
 
         String[] DiningHallList = {"Au Bon Pain - Graduate Life Center", "Au Bon Pain - Squires Cafe",
                 "Au Bon Pain - Squires Kiosk", "Au Bon Pain - Goodwin", "Burger '37", "D2", "Deet's Place", "West End Market", "Turner Place at Lavery",
@@ -39,5 +44,9 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
         
+    }
+
+    public void updateGPSLocation(Location location) {
+        compass.setCurrentLocation(location);
     }
 }
