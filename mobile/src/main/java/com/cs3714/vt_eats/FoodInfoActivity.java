@@ -58,17 +58,17 @@ public class FoodInfoActivity extends AppCompatActivity {
                 break;
             case 6:  iv.setImageResource(R.drawable.deets);
                 break;
-            case 7:  iv.setImageResource(R.drawable.westend);
+            case 7:  iv.setImageResource(R.drawable.dunkindonuts);
                 break;
-            case 8:  iv.setImageResource(R.drawable.dolciecaffe);
+            case 8:  iv.setImageResource(R.drawable.dxpress);
                 break;
-            case 9:  iv.setImageResource(R.drawable.dxpress);
+            case 9:  iv.setImageResource(R.drawable.hokiegrill);
                 break;
             case 10: iv.setImageResource(R.drawable.owens);
                 break;
-            case 11: iv.setImageResource(R.drawable.dunkindonuts);
+            case 11: iv.setImageResource(R.drawable.dolciecaffe);
                 break;
-            case 12: iv.setImageResource(R.drawable.hokiegrill);
+            case 12: iv.setImageResource(R.drawable.westend);
                 break;
             default: break;
 
