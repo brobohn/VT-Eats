@@ -94,4 +94,8 @@ public class DiningHall {
         return location;
     }
 
+    public void addFoodItem(String name, FoodItem foodItem){
+        menu.put(name, foodItem);
+    }
+
 }
