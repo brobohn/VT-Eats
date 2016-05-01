@@ -5,12 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
+    DiningHallManager diningHallManager;
     ListView lv;
 
     GPSManager gpsManager;
@@ -24,17 +24,20 @@ public class MainActivity extends AppCompatActivity {
         gpsManager = new GPSManager(this);
         compass = new Compass();
 
+        diningHallManager = new DiningHallManager();
+
         Location loc = new Location("");
         loc.setLatitude(37.236970);
         loc.setLongitude(-80.434684);
         double distance = compass.getDistanceTo(loc);
 
-        String[] DiningHallList = {"Au Bon Pain - Graduate Life Center", "Au Bon Pain - Squires Cafe",
+
+        /*String[] DiningHallList = {"Au Bon Pain - Graduate Life Center", "Au Bon Pain - Squires Cafe",
                 "Au Bon Pain - Squires Kiosk", "Au Bon Pain - Goodwin", "Burger '37", "D2", "Deet's Place", "West End Market", "Turner Place at Lavery",
-                "DXpress", "Owens Food Market", "Dunkin Donuts", "Hokie Grill"};
+                "DXpress", "Owens Food Market", "Dunkin Donuts", "Hokie Grill"};*/
 
 
-        ListAdapter DiningHallsAdapter = new CustomAdapter(this, DiningHallList);
+        ListAdapter DiningHallsAdapter = new DiningHallCustomAdapter(this, diningHallManager.getDiningHalls());
         lv = (ListView) findViewById(R.id.listView);
         lv.setAdapter(DiningHallsAdapter);
 
