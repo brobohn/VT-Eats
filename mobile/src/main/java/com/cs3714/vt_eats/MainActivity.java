@@ -24,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
         gpsManager = new GPSManager(this);
         compass = new Compass();
 
+        Location loc = new Location("");
+        loc.setLatitude(37.236970);
+        loc.setLongitude(-80.434684);
+        double distance = compass.getDistanceTo(loc);
+
         String[] DiningHallList = {"Au Bon Pain - Graduate Life Center", "Au Bon Pain - Squires Cafe",
                 "Au Bon Pain - Squires Kiosk", "Au Bon Pain - Goodwin", "Burger '37", "D2", "Deet's Place", "West End Market", "Turner Place at Lavery",
                 "DXpress", "Owens Food Market", "Dunkin Donuts", "Hokie Grill"};
@@ -47,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void updateGPSLocation(Location location) {
-        compass.setCurrentLocation(location);
+        if(location != null){
+            compass.setCurrentLocation(location);
+        }
     }
 }

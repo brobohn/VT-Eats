@@ -19,6 +19,9 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+
+import java.util.List;
 
 /**
  *
@@ -46,7 +49,8 @@ public class GPSManager implements LocationListener {
             return;
         }
         locationManager.requestLocationUpdates(LOCATIONPROVIDER, 5000, 0, this);
-        mainActivity.updateGPSLocation(locationManager.getLastKnownLocation(LOCATIONPROVIDER));
+        Location loc = locationManager.getLastKnownLocation(LOCATIONPROVIDER);
+        mainActivity.updateGPSLocation(loc);
     }
 
     public void unregister() {
@@ -75,5 +79,25 @@ public class GPSManager implements LocationListener {
     @Override
     public void onProviderDisabled(String s) {
 
+    }
+
+    private Location getLastKnownLocation() {
+        List<String> providers = locationManager.getProviders(true);
+        Location bestLocation = null;
+        for (String provider : providers) {
+            if (ActivityCompat.checkSelfPermission(mainActivity, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                    && ActivityCompat.checkSelfPermission(mainActivity, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                return null;
+            }
+            Location l = locationManager.getLastKnownLocation(provider);
+            if (l == null) {
+                continue;
+            }
+            if (bestLocation == null || l.getAccuracy() < bestLocation.getAccuracy()) {
+                // Found best last known location: %s", l);
+                bestLocation = l;
+            }
+        }
+        return bestLocation;
     }
 }

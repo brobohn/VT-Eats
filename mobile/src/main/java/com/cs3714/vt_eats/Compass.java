@@ -14,6 +14,9 @@ public class Compass {
     Location currentLocation;
 
     public Compass() {
+        currentLocation = new Location("");
+        currentLocation.setLatitude(37.230572);
+        currentLocation.setLongitude(-80.421788);
     }
 
     public double getDistanceTo(Location loc){
