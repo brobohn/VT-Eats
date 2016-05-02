@@ -1,5 +1,6 @@
 package com.cs3714.vt_eats;
 
+import android.graphics.Color;
 import android.location.Location;
 import android.view.LayoutInflater;
 import android.widget.ArrayAdapter;
@@ -41,8 +42,10 @@ class DiningHallCustomAdapter extends ArrayAdapter<DiningHall> {
         TextView openTextView = (TextView) customView.findViewById(R.id.tv_open);
         if (isOpenNow) {
             openTextView.setText("Open now!");
+            openTextView.setTextColor(getContext().getResources().getColor(R.color.colorOpen));
         } else {
             openTextView.setText("Closed now.");
+            openTextView.setTextColor(getContext().getResources().getColor(R.color.colorClosed));
         }
 
         // Display hours
