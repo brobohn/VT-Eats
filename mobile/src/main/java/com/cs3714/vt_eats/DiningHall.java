@@ -17,7 +17,7 @@ public class DiningHall implements Parcelable {
 
     private String name;
     Location location;
-    HashMap<String, FoodItem> menu;
+    HashMap<String, FoodItem> menu = new HashMap<>();
     ArrayList<BusinessHour> businessHours;
     int secondsPerHour = 60*60;
 
