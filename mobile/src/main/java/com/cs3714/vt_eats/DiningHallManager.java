@@ -171,20 +171,13 @@ public class DiningHallManager {
         diningHalls[7] = dd;
 
         DiningHall dx = new DiningHall("DXpress");
-        dx.addHours(Calendar.SUNDAY, 0, 2);
-        dx.addHours(Calendar.SUNDAY, 9, 24);
-        dx.addHours(Calendar.MONDAY, 0, 2);
-        dx.addHours(Calendar.MONDAY, 7, 24);
-        dx.addHours(Calendar.TUESDAY, 0, 2);
-        dx.addHours(Calendar.TUESDAY, 7, 24);
-        dx.addHours(Calendar.WEDNESDAY, 0, 2);
-        dx.addHours(Calendar.WEDNESDAY, 7, 24);
-        dx.addHours(Calendar.THURSDAY, 0, 2);
-        dx.addHours(Calendar.THURSDAY, 7, 24);
-        dx.addHours(Calendar.FRIDAY, 0, 2);
-        dx.addHours(Calendar.FRIDAY, 7, 24);
-        dx.addHours(Calendar.SATURDAY, 0, 2);
-        dx.addHours(Calendar.SATURDAY, 7, 24);
+        dx.addHours(Calendar.SUNDAY, 9, 26);
+        dx.addHours(Calendar.MONDAY, 7, 26);
+        dx.addHours(Calendar.TUESDAY, 7, 26);
+        dx.addHours(Calendar.WEDNESDAY, 7, 26);
+        dx.addHours(Calendar.THURSDAY, 7, 26);
+        dx.addHours(Calendar.FRIDAY, 7, 26);
+        dx.addHours(Calendar.SATURDAY, 7, 26);
         dx.setLocation(37.224525, -80.420769);
         //Hot Sandwiches
         dx.addFoodItem("Bacon Cheeseburger", new FoodItem(503, "Gluten, Milk, Soy and Wheat"));
