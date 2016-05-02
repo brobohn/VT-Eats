@@ -26,16 +26,6 @@ public class FoodInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_foodinfo);
 
-        // Toolbar is defined in the layout file
-    /*    Toolbar myToolBar = (Toolbar) findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolBar);
-
-        // Get a support ActionBar corresponding to this toolbar
-        ActionBar ab = getSupportActionBar();
-
-        // Enable the Up button
-        ab.setDisplayHomeAsUpEnabled(true); */
-
         Intent intent = getIntent();
         int defaultValue = 0;
         int DiningHallSelected = intent.getIntExtra("DINING_HALL_SELECTION", defaultValue);
@@ -111,7 +101,7 @@ public class FoodInfoActivity extends AppCompatActivity {
 
 
         // Menu
-        ListAdapter FoodNamesAdapter = new FoodListCustomAdapter(this, ABPFoodList);
+        ListAdapter FoodNamesAdapter = new FoodListCustomAdapter(this, diningHall.menu);
         foodlist = (ListView) findViewById(R.id.menulistview);
         foodlist.setAdapter(FoodNamesAdapter);
 

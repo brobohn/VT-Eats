@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Food Name"
-        android:id="@+id/textView34" />
+        android:id="@+id/food_name_view" />
 
     <TableRow
         android:layout_width="match_parent"
@@ -18,8 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Calories:"
-            android:id="@+id/textView35" />
+            android:text="Calories:"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -27,7 +26,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_marginLeft="10dp"
             android:text="CalorieValue"
-            android:id="@+id/textView36" />
+            android:id="@+id/calorie_view" />
     </TableRow>
 
 </LinearLayout>
