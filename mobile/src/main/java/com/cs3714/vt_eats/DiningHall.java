@@ -24,6 +24,7 @@ public class DiningHall implements Parcelable {
     public DiningHall(String n) {
         this.name = n;
         this.businessHours = new ArrayList<BusinessHour>();
+        this.menu = new HashMap<>();
     }
 
     protected DiningHall(Parcel in) {

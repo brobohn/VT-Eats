@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.location.Location;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
@@ -83,8 +84,23 @@ public class MainActivity extends AppCompatActivity {
     public void updateGPSLocation(Location location) {
         if(location != null){
             compass.setCurrentLocation(location);
-
-            DiningHallsAdapter.notifyDataSetChanged();
+            //DiningHallsAdapter.notifyDataSetChanged();
+            DiningHallsAdapter = new DiningHallCustomAdapter(this, diningHallManager.getDiningHalls(), compass.currentLocation);
+            lv = (ListView) findViewById(R.id.listView);
+            lv.setAdapter(DiningHallsAdapter);
         }
     }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        gpsManager.register();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        gpsManager.unregister();
+    }
+
+
 }

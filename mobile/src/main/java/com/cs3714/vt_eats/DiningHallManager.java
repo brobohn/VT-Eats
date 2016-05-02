@@ -74,6 +74,60 @@ public class DiningHallManager {
         b37.addHours(Calendar.FRIDAY, 10.5, 19);
         b37.addHours(Calendar.SATURDAY, 11, 19);
         b37.setLocation(37.229209, -80.418380);
+        //Burgers
+        b37.addFoodItem("Bacon Cheeseburger", new FoodItem(554, "Gluten, Milk, Nuts, Soy and Wheat"));
+        b37.addFoodItem("Burger: Ancho Turkey", new FoodItem(349, "Gluten, Milk, Nuts, Soy and Wheat"));
+        b37.addFoodItem("Burger: Plain", new FoodItem(416, "Gluten, Milk, Nuts, Soy and Wheat"));
+        b37.addFoodItem("Burger: Plain w/Gluten Freen Bun", new FoodItem(536, "Eggs and Soy"));
+        b37.addFoodItem("Burger: Rice and Beans", new FoodItem(467, "Eggs, Gluten, Milk, Nuts, Soy and Wheat"));
+        b37.addFoodItem("Cheeseburger", new FoodItem(584, "Gluten, Milk, Nuts, Soy and Wheat"));
+        b37.addFoodItem("Gluten Free Bun", new FoodItem(250, "Eggs"));
+        b37.addFoodItem("Signature Burger #1 (Bacon & Egg)", new FoodItem(783, "Eggs, Gluten, Milk, Nuts, Soy and Wheat"));
+        b37.addFoodItem("Signature Burger #2 (Mushroom & Swiss", new FoodItem(546, "Gluten, Milk, Nuts, Soy and Wheat"));
+        b37.addFoodItem("Signature Burger #3 (Cheddar & Fried Onions", new FoodItem(700, "Eggs, Gluten, Milk, Nuts, Soy and Wheat"));
+        b37.addFoodItem("Signature Burger #4 (Pepper Jack, Salsa, Avocado)", new FoodItem(617, "Eggs, Gluten, Milk, Nuts, Soy and Wheat"));
+        b37.addFoodItem("Signature Burger #5 (Bleu Cheese, Fried Onions, A-1 Sauce", new FoodItem(686, "Eggs, Gluten, Milk, Nuts, Soy and Wheat"));
+        b37.addFoodItem("Signature Burger #6 (Provolone & Sauteed Onions", new FoodItem(559, "Gluten, Milk, Nuts, Soy and Wheat"));
+        //Fries
+        b37.addFoodItem("French Fries", new FoodItem(461, "Soy"));
+        b37.addFoodItem("Sweet Potato Fries", new FoodItem(671, "Soy"));
+        //Milkshakes
+        b37.addFoodItem("Chocolate Brownie Milkshake", new FoodItem(619, "Eggs, Gluten, Milk, Nuts, Soy and Wheat"));
+        b37.addFoodItem("Chocolate Milkshake", new FoodItem(500, "Gluten, Milk and Soy"));
+        b37.addFoodItem("Cookies & Cream Milkshake", new FoodItem(520, "Gluten, Milk, Nuts, Soy and Wheat"));
+        b37.addFoodItem("Peanut Butter & Banana Milkshake", new FoodItem(603, "Milk, Nuts and Soy"));
+        b37.addFoodItem("Salted Caramel Milkshake", new FoodItem(569, "Gluten, Milk, Nuts and Soy"));
+        b37.addFoodItem("Strawberry Banana Milkshake", new FoodItem(427, "Milk and Nuts"));
+        b37.addFoodItem("Strawberry Milkshake", new FoodItem(396, "Milk and Nuts"));
+        b37.addFoodItem("Vanilla Milkshake", new FoodItem(383, "Milk and Nuts"));
+        //Toppings
+        b37.addFoodItem("Toppings: A-1 Sauce/.5oz", new FoodItem(12, "None"));
+        b37.addFoodItem("Toppings: Avocado Ranch Dipping Sauce/oz", new FoodItem(93, "Eggs, Milk and Soy"));
+        b37.addFoodItem("Toppings: B37 Smokey Sriracha Mayo/floz", new FoodItem(99, "Eggs and Soy"));
+        b37.addFoodItem("Toppings: Bacon/3 slices", new FoodItem(82, "None"));
+        b37.addFoodItem("Toppings: Banana Peppers/.5oz", new FoodItem(5, "None"));
+        b37.addFoodItem("Toppings: Burger '37 Sauce/oz", new FoodItem(35, "None"));
+        b37.addFoodItem("Toppings: French Fried Onion Pieces/.5oz", new FoodItem(91, "Milk, Gluten, Soy and Wheat"));
+        b37.addFoodItem("Toppings: Fresh Avocado Slices/1/12 each", new FoodItem(16, "None"));
+        b37.addFoodItem("Toppings: Fry Sauce/2oz", new FoodItem(220, "Eggs and Soy"));
+        b37.addFoodItem("Toppings: Guacamole/3oz", new FoodItem(147, "None"));
+        b37.addFoodItem("Toppings: Heinz 57 Sauce/.5oz", new FoodItem(16, "Gluten and Soy"));
+        b37.addFoodItem("Toppings: Jalapenos/.5oz", new FoodItem(2, "Gluten"));
+        b37.addFoodItem("Toppings: Ketchup/oz", new FoodItem(13, "None"));
+        b37.addFoodItem("Toppings: Ketchup: Jalapeno Cilantro/oz", new FoodItem(39, "Soy"));
+        b37.addFoodItem("Toppings: Lettuce Leaves/.33oz", new FoodItem(1, "None"));
+        b37.addFoodItem("Toppings: Marshmallow Dipping Sauce/2oz", new FoodItem(151, "Gluten, Milk and Soy"));
+        b37.addFoodItem("Toppings: Mayonnaise: Mango Habanero/oz", new FoodItem(83, "Eggs, Gluten, Milk and Soy"));
+        b37.addFoodItem("Toppings: Mayonnaise: Old Bay/oz", new FoodItem(118, "Eggs and Soy"));
+        b37.addFoodItem("Toppings: Pesto Sauce/.5oz", new FoodItem(47, "Milk"));
+        b37.addFoodItem("Toppings: Pickle Chips/.5oz", new FoodItem(1, "None"));
+        b37.addFoodItem("Toppings: Red Onions/oz", new FoodItem(11, "None"));
+        b37.addFoodItem("Toppings: Roasted Red Pepper/.5oz", new FoodItem(0, "None"));
+        b37.addFoodItem("Toppings: Salsa: Fresh Tomato/2oz", new FoodItem(16, "None"));
+        b37.addFoodItem("Toppings: Sauteed Fresh Mushrooms/oz", new FoodItem(23, "Soy"));
+        b37.addFoodItem("Toppings: Sauteed Fresh Onions/oz", new FoodItem(20, "Soy"));
+        b37.addFoodItem("Toppings: Sauteed Fresh Peppers/oz", new FoodItem(13, "Soy"));
+        b37.addFoodItem("Toppings: Sliced Tomatoes/oz", new FoodItem(5, "None"));
         diningHalls[4] = b37;
 
         DiningHall d2 = new DiningHall("D2");
