@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Ben on 4/29/2016.
@@ -28,10 +29,18 @@ public class DiningHall implements Parcelable {
     }
 
     protected DiningHall(Parcel in) {
+        this.menu = new HashMap<>();
+
         name = in.readString();
         location = in.readParcelable(Location.class.getClassLoader());
         secondsPerHour = in.readInt();
         businessHours = in.readArrayList(null);
+        int size = in.readInt();
+        for(int i = 0; i < size; i++){
+            String name = in.readString();
+            FoodItem foodItem = (FoodItem) in.readSerializable();
+            menu.put(name, foodItem);
+        }
     }
 
     public static final Creator<DiningHall> CREATOR = new Creator<DiningHall>() {
@@ -142,5 +151,10 @@ public class DiningHall implements Parcelable {
         dest.writeParcelable(location, flags);
         dest.writeInt(secondsPerHour);
         dest.writeList(businessHours);
+        dest.writeInt(menu.size());
+        for(Map.Entry<String, FoodItem> entry : menu.entrySet()){
+            dest.writeString(entry.getKey());
+            dest.writeSerializable(entry.getValue());
+        }
     }
 }

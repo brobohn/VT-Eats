@@ -1,9 +1,11 @@
 package com.cs3714.vt_eats;
 
+import java.io.Serializable;
+
 /**
  * Created by Ben on 4/29/2016.
  */
-public class FoodItem {
+public class FoodItem implements Serializable {
 
     int calories;
     String allergens;

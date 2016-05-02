@@ -51,7 +51,7 @@ public class FoodListCustomAdapter extends BaseAdapter {
         FoodItem foodItem = (FoodItem) getItem(position);
 
         TextView foodNameText = (TextView) customView.findViewById(R.id.food_name_view);
-        foodNameText.setText("food item");
+        foodNameText.setText(names[position]);
 
         return customView;
     }
