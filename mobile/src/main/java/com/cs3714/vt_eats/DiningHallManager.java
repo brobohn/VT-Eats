@@ -57,10 +57,10 @@ public class DiningHallManager {
         diningHalls[2] = abpsk;
 
         DiningHall abpg = new DiningHall("Au Bon Pain - Goodwin");
-        abpg.addHours(Calendar.MONDAY, 7.5, 14);
-        abpg.addHours(Calendar.TUESDAY, 7.5, 14);
-        abpg.addHours(Calendar.WEDNESDAY, 7.5, 14);
-        abpg.addHours(Calendar.THURSDAY, 7.5, 14);
+        abpg.addHours(Calendar.MONDAY, 7.5, 16);
+        abpg.addHours(Calendar.TUESDAY, 7.5, 16);
+        abpg.addHours(Calendar.WEDNESDAY, 7.5, 16);
+        abpg.addHours(Calendar.THURSDAY, 7.5, 16);
         abpg.addHours(Calendar.FRIDAY, 7.5, 15.5);
         abpg.setLocation(37.232431, -80.425817);
         diningHalls[3] = abpg;
