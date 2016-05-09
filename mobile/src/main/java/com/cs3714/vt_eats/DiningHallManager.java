@@ -45,6 +45,109 @@ public class DiningHallManager {
         abpsc.addHours(Calendar.FRIDAY, 8, 15);
         abpsc.addHours(Calendar.SATURDAY, 10, 19);
         abpsc.setLocation(37.229446, -80.418240);
+        // Artisan Breads
+        abpsc.addFoodItem("Asiago Breadstick", new FoodItem(150, "Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Everything Breadstick", new FoodItem(160, "Soy, Wheat, Sesame"));
+        abpsc.addFoodItem("Southwest Jalapeno Cornbread", new FoodItem(400, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Whole Grain Wheat Bread", new FoodItem(280, "Soy, Wheat"));
+        abpsc.addFoodItem("Ciabatta", new FoodItem(190, "Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Gluten Free 3 Seed Roll", new FoodItem(160, "Eggs"));
+        abpsc.addFoodItem("Tortilla Wrap", new FoodItem(280, "Soy Wheat"));
+        abpsc.addFoodItem("Traditional Artisan Baguette", new FoodItem(190, "Soy,Wheat"));
+        abpsc.addFoodItem("Whole Grain Wheat Bread", new FoodItem(280, "Soy, Wheat"));
+        abpsc.addFoodItem("Whole Wheat Tortilla Wrap", new FoodItem(260, "Soy, Wheat"));
+        // Bagels
+        abpsc.addFoodItem("Asiago Cheese Bagel", new FoodItem(330, "Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Everything Bagel", new FoodItem(260, "Soy, Wheat, Sesame"));
+        abpsc.addFoodItem("Onion Dill Bagel", new FoodItem(260, "Soy, Wheat"));
+        abpsc.addFoodItem("Skinny Wheat Bagel", new FoodItem(90, "Soy, Wheat"));
+        abpsc.addFoodItem("Cinnamon Crisp Bagel", new FoodItem(370, "Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Honey 9-Grain Bagel", new FoodItem(280, "Soy, Wheat, Granola Topping may contain milk."));
+        abpsc.addFoodItem("Plain Bagel", new FoodItem(250, "Soy, Wheat"));
+        abpsc.addFoodItem("Cinnamon Raisin Bagel", new FoodItem(280, "Soy, Wheat"));
+        abpsc.addFoodItem("Jalapeno Cheddar Bagel", new FoodItem(290, "Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Sesame Bagel", new FoodItem(270, "Soy, Wheat, Sesame"));
+        // Cream Cheese
+        abpsc.addFoodItem("Garden Vegetable Cream Cheese", new FoodItem(100, "Milk"));
+        abpsc.addFoodItem("Reduced Fat Philadelphia Cream Cheese", new FoodItem(90, "Milk"));
+        abpsc.addFoodItem("Honey Pecan Cream Cheese", new FoodItem(150, "Milk, Tree Nuts(Pecans). May Contain Peanuts"));
+        abpsc.addFoodItem("Almond Biscotti", new FoodItem(130, "Eggs, Milk, Tree Nuts(Almonds), Wheat"));
+        abpsc.addFoodItem("Chocolate Dipped Shortbread Cookie", new FoodItem(390, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Double Chocolate Mudslide Cookie", new FoodItem(370, "Eggs, Milk, Soy, Tree Nuts, Wheat"));
+        // Cookies
+        abpsc.addFoodItem("Almond Biscotti", new FoodItem(130, "Eggs, Milk, Tree Nuts, Wheat"));
+        abpsc.addFoodItem("Chocolate Dipped Shortbread Cookie", new FoodItem(390, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Double Chocolate Mudslide Cookie", new FoodItem(370, "Eggs, Milk, Soy, Tree Nuts, Wheat"));
+        abpsc.addFoodItem("Lemon White Chocolate Cookie", new FoodItem(360, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Chocolate Chip Cookie", new FoodItem(370,"Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Chunky Peanut Butter Cookie", new FoodItem(400, "Eggs, Milk, Peanuts, Wheat"));
+        abpsc.addFoodItem("English Toffee Cookie", new FoodItem(320, "Eggs, Milk, Soy, Tree Nuts, Wheats"));
+        abpsc.addFoodItem("Mint Chocolate Chip Cookie", new FoodItem(560, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Chocolate Dipped Cranberry Almond Macaroon", new FoodItem(290, "Eggs, Milk, Soy, Tree Nuts, Wheat, Sulfites"));
+        abpsc.addFoodItem("Classic Oatmeal Raisin Cookie", new FoodItem(290, "Eggs, Milk, Wheat"));
+        abpsc.addFoodItem("Harvest Cookie", new FoodItem(370, "Eggs, Milk, Tree Nuts, Wheat"));
+        abpsc.addFoodItem("Mudslide Cookie", new FoodItem(360, "Eggs, Milk, Soy, Tree Nuts, Wheat"));
+        // Croissants
+        abpsc.addFoodItem("Almond Croissant", new FoodItem(500, "Eggs, Milk, Soy, Tree Nuts, Wheat, Sulfites"));
+        abpsc.addFoodItem("Chocolate Croissant", new FoodItem(480, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Raspberry Cheese Croissant", new FoodItem(360, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Strawberry CroisBun", new FoodItem(500, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Apple and Cinnamon Croissant", new FoodItem(240, "Eggs, Milk, Soy, Wheat, Sulfites"));
+        abpsc.addFoodItem("Ham and Cheese Croissant", new FoodItem(410, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Raspberry CroisBun", new FoodItem(530, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Sweet Cheese CroisBun", new FoodItem(510, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Cherry CroisBun", new FoodItem(500, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Plain Croissant", new FoodItem(280, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Spinach and Cheese Hot Croissant", new FoodItem(330, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Sweet Cheese Croissant", new FoodItem(420, "Eggs, Milk, Soy, Wheat"));
+        // Muffins & Scones
+        abpsc.addFoodItem("Blueberry Muffin", new FoodItem(490, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Cinnamon Chip Scone", new FoodItem(500, "Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Cranberry Walnut Muffin", new FoodItem(520, "Eggs, Milk, Soy, Tree Nuts, Wheat"));
+        abpsc.addFoodItem("Raisin Bran Muffin", new FoodItem(420, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Blueberry Scone", new FoodItem(410, "Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Corn Muffin", new FoodItem(490, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Double Chocolate Chunk Muffin", new FoodItem(580, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Carrot Walnut Muffin", new FoodItem(540, "Eggs, Soy, Tree Nuts, Wheat, Sulfites"));
+        abpsc.addFoodItem("Cranberry Orange Scone", new FoodItem(520, "Eggs, Milk, Wheat"));
+        abpsc.addFoodItem("Low Fat Berry Muffin Whole Grains", new FoodItem(290, "Eggs, Milk, Soy, Wheat"));
+        // Brownies
+        abpsc.addFoodItem("Brownie Bites", new FoodItem(600, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Chewy Marshmallow Bar", new FoodItem(250, "Milk"));
+        abpsc.addFoodItem("Chocolate Chip Brownie", new FoodItem(440, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Gluten Free Chocolate Chip Brownie", new FoodItem(420, "Eggs, Soy"));
+        // Cupcakes
+        abpsc.addFoodItem("Double Chocolate Cupcake", new FoodItem(320, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Lemon Drop Cupcake", new FoodItem(270,"Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Red Velvet Cupcake", new FoodItem(400, "Eggs, Milk, Soy, Wheat"));
+        // Danish
+        abpsc.addFoodItem("Blueberry Danish", new FoodItem(380, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Cherry Danish", new FoodItem(370, "Eggs, Milk, Soy, Wheat, Sulfites"));
+        abpsc.addFoodItem("Sweet Cheese Danish", new FoodItem(450, "Eggs, Milk, Soy, Wheat, Sulfites"));
+        // Other Goodies
+        abpsc.addFoodItem("Chocolate and Creme Torsade", new FoodItem(230, "Eggs, Milk, Soy, Tree Nuts, Wheat, Sulfites"));
+        abpsc.addFoodItem("Marble Pound Cake", new FoodItem(450, "Eggs, Milk, Soy, Wheat"));
+        abpsc.addFoodItem("Cinnamon Swirl Roll", new FoodItem(550, "Eggs, Milk, Soy, Wheat, Sulfites"));
+        abpsc.addFoodItem("Pecan Roll", new FoodItem(740, "Eggs, Milk, Soy, Tree Nuts(Pecans), Wheat"));
+        abpsc.addFoodItem("Raspberry Torsade", new FoodItem(200, "Eggs, Milk, Soy, Wheat, Sulfites  "));
+        // Hot Coffee
+        abpsc.addFoodItem("Decaf French Roast", new FoodItem(5,"None"));
+        abpsc.addFoodItem("Hazelnut", new FoodItem(5, "None"));
+        abpsc.addFoodItem("French Roast", new FoodItem(5, "None"));
+        abpsc.addFoodItem("Morning Blend", new FoodItem(5, "None"));
+        abpsc.addFoodItem("French Vanilla", new FoodItem(5, "None"));
+        // Hot Espresso
+        abpsc.addFoodItem("Caffe Americano", new FoodItem(10, "None"));
+        abpsc.addFoodItem("Cappuccino", new FoodItem(120, "Milk"));
+        abpsc.addFoodItem("Espresso", new FoodItem(5, "None"));
+        abpsc.addFoodItem("Turtle Latte", new FoodItem(320, "Milk, Peanuts, Tree Nuts"));
+        abpsc.addFoodItem("Caffe Latte", new FoodItem(140, "Milk"));
+        abpsc.addFoodItem("Caramel Macchiato", new FoodItem(270, "Milk"));
+        abpsc.addFoodItem("Hot Chocolate", new FoodItem(360, "Milk"));
+        abpsc.addFoodItem("Vanilla Latte", new FoodItem(240, "Milk"));
+        abpsc.addFoodItem("Chai Latte", new FoodItem(210, "Milk"));
+        abpsc.addFoodItem("Mocha Latte", new FoodItem(310, "Milk"));
+
         diningHalls[1] = abpsc;
 
         DiningHall abpsk = new DiningHall("Au Bon Pain - Squires Kiosk");
