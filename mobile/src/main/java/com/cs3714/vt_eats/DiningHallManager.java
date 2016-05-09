@@ -314,6 +314,43 @@ public class DiningHallManager {
         dd.addHours(Calendar.THURSDAY, 7.5, 21);
         dd.addHours(Calendar.FRIDAY, 7.5, 21);
         dd.setLocation(37.226881, -80.418482);
+
+        dd.addFoodItem("Cappucino", new FoodItem(80, "Milk"));
+        dd.addFoodItem("Dunkaccino", new FoodItem(240, "Milk, Soy"));
+        dd.addFoodItem("Espresso", new FoodItem(5, "None"));
+        dd.addFoodItem("Hot Chocolate", new FoodItem(220, "Milk, Soy"));
+        dd.addFoodItem("Hot Coffee", new FoodItem(5, "None"));
+        dd.addFoodItem("Hot Macchiato", new FoodItem(180, "Milk"));
+        dd.addFoodItem("Hot Tea", new FoodItem(0, "None"));
+        dd.addFoodItem("Latte", new FoodItem(80, "Tree Nuts"));
+        dd.addFoodItem("Mint Hot Chocolate", new FoodItem(210, "Milk, Soy"));
+        dd.addFoodItem("Salted Caramel Hot Chocolate", new FoodItem(220, "Milk, Soy"));
+        dd.addFoodItem("S'mores Hot Chocolate", new FoodItem(220, "Milk, Soy"));
+        dd.addFoodItem("Vanilla Chai", new FoodItem(330, "Milk, Soy"));
+        dd.addFoodItem("Iced Coffee", new FoodItem(10, "None"));
+        dd.addFoodItem("Iced Green Tea", new FoodItem(70, "None"));
+        dd.addFoodItem("Iced Latte", new FoodItem(80, "Tree Nuts"));
+        dd.addFoodItem("Iced Machiatto", new FoodItem(160, "Milk"));
+        dd.addFoodItem("Iced Tea", new FoodItem(70, "None"));
+        dd.addFoodItem("Sweet Tea", new FoodItem(160, "None"));
+        dd.addFoodItem("Frozem Caramel Coffee Coolatta", new FoodItem(300, "Milk"));
+        dd.addFoodItem("Frozen Coffee Coolatta", new FoodItem(400, "Milk"));
+        dd.addFoodItem("Frozen Dunkaccino", new FoodItem(400, "Milk, Soy"));
+        dd.addFoodItem("Frozen Mocha Coffee Coolatta", new FoodItem(300, "Milk"));
+        dd.addFoodItem("Hot Chocolate-Frozen", new FoodItem(400, "Milk, Soy"));
+        dd.addFoodItem("Minute-Maid Orange Coolatta", new FoodItem(220, "None"));
+        dd.addFoodItem("Strawberry Banana Smoothie", new FoodItem(290, "Milk"));
+        dd.addFoodItem("Strawberry Coolatta", new FoodItem(250, "None"));
+        dd.addFoodItem("Tropical Mango Smoothie", new FoodItem(290, "Milk"));
+        dd.addFoodItem("Vanilla Bean Coolatta", new FoodItem(420, "Milk"));
+        dd.addFoodItem("Bagels", new FoodItem(350, "Soy, Wheat"));
+        dd.addFoodItem("Danish", new FoodItem(400, "Eggs, Milk, Soy, Wheat"));
+        dd.addFoodItem("Donuts", new FoodItem(310, "Eggs, Milk, Soy, Wheat"));
+        dd.addFoodItem("Hash Browns", new FoodItem(140, "None"));
+        dd.addFoodItem("Muffins", new FoodItem(510,"Eggs, Milk, Soy, Wheat"));
+        dd.addFoodItem("Munchkins", new FoodItem(70, "Eggs, Milk, Soy, Wheat"));
+        dd.addFoodItem("Other Bakery", new FoodItem(420, "Eggs, Milk, Soy, Wheat"));
+
         diningHalls[7] = dd;
 
         DiningHall dx = new DiningHall("DXpress");
