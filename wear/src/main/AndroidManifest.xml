@@ -26,6 +26,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SecondActivity"
+            android:label="Main Menu"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cs3714.vt_eats.SecondActivity" />
+        </activity>
+        <activity
+            android:name=".InfoActivity"
+            android:label="Main Menu"
+            android:parentActivityName=".SecondActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cs3714.vt_eats.InfoActivity" />
+        </activity>
+        <activity
+            android:name=".ThirdActivity"
+            android:label="Main Menu"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cs3714.vt_eats.ThirdActivity" />
+        </activity>
     </application>
 
 </manifest>

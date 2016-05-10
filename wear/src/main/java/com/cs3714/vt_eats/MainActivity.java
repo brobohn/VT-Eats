@@ -1,23 +1,24 @@
 package com.cs3714.vt_eats;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
 import android.support.wearable.view.BoxInsetLayout;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Random;
 
-public class MainActivity extends WearableActivity {
-
-    private static final SimpleDateFormat AMBIENT_DATE_FORMAT =
-            new SimpleDateFormat("HH:mm", Locale.US);
+public class MainActivity extends WearableActivity implements View.OnClickListener {
 
     private BoxInsetLayout mContainerView;
-    private TextView mTextView;
-    private TextView mClockView;
+
+    Button nearestDH;
+    Button random;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +27,33 @@ public class MainActivity extends WearableActivity {
         setAmbientEnabled();
 
         mContainerView = (BoxInsetLayout) findViewById(R.id.container);
-        mTextView = (TextView) findViewById(R.id.text);
-        mClockView = (TextView) findViewById(R.id.clock);
+
+        nearestDH = (Button) findViewById(R.id.button2);
+        random = (Button) findViewById(R.id.button4);
+
+        nearestDH.setOnClickListener(this);
+        random.setOnClickListener(this);
+    }
+
+    public void onClick(View view) {
+
+        if(view.getId() == nearestDH.getId()) {
+
+            Intent intent = new Intent(this, SecondActivity.class);
+
+            startActivity(intent);
+
+        } else if(view.getId() == random.getId()) {
+
+            Intent intent = new Intent(this, ThirdActivity.class);
+
+            Random rand = new Random();
+            int n = rand.nextInt(7);
+
+            intent.putExtra("index", n);
+
+            startActivity(intent);
+        }
     }
 
     @Override
@@ -49,16 +75,13 @@ public class MainActivity extends WearableActivity {
     }
 
     private void updateDisplay() {
+
         if (isAmbient()) {
             mContainerView.setBackgroundColor(getResources().getColor(android.R.color.black));
-            mTextView.setTextColor(getResources().getColor(android.R.color.white));
-            mClockView.setVisibility(View.VISIBLE);
 
-            mClockView.setText(AMBIENT_DATE_FORMAT.format(new Date()));
         } else {
             mContainerView.setBackground(null);
-            mTextView.setTextColor(getResources().getColor(android.R.color.black));
-            mClockView.setVisibility(View.GONE);
+
         }
     }
 }
